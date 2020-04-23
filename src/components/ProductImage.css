@@ -1,0 +1,15 @@
+.product-image {
+
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.no-image {
+    background-color: #F0F0F0;
+}

@@ -1,0 +1,27 @@
+.products-list {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+
+}
+
+#list-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+#filters {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.action {
+    margin-right: 10px;
+}
+
+select {
+    margin-left: 5px;
+}

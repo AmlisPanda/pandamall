@@ -1,0 +1,196 @@
+[{
+        "label": "Table de cuisine",
+        "price": 150,
+        "quantity": 1,
+        "avaibility": "juin",
+        "images": [
+            "table-cuisine.jpg"
+        ],
+        "category": "Cuisine"
+    },
+    {
+        "label": "Chaises en bois",
+        "price": 10,
+        "quantity": 4,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Meuble TV",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Salon"
+    },
+    {
+        "label": "T 42\" SEIKI",
+        "price": 200,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "label": "Table basse",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "label": "Meuble à roulettes",
+        "price": 80,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Canapés/fauteuil",
+        "price": 200,
+        "quantity": 3,
+        "avaibility": "mai",
+        "category": "Salon"
+    },
+    {
+        "label": "Meuble d'appoint",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "label": "Tablettes IKEA",
+        "price": 10,
+        "quantity": 2,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "label": "Lampe IKEA",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "label": "Meuble chaussures",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Salon"
+    },
+    {
+        "label": "Table pliante de balcon",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Extérieur"
+    },
+    {
+        "label": "Chaises pliantes",
+        "price": 20,
+        "quantity": 3,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Table de pique-nique pliante",
+        "price": 40,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Matelas gonflable",
+        "price": 25,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Chambre"
+    },
+    {
+        "label": "Set de meubles de chambre",
+        "price": 300,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Chambre",
+        "description": "2 commodes + 2 tables de chevet + miroir + base de lit"
+    },
+    {
+        "label": "Canapé-lit",
+        "price": 30,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Chambre"
+    },
+    {
+        "label": "Panier à linge blanc",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Autres"
+    },
+    {
+        "label": "Paniers à linge solides",
+        "price": 25,
+        "quantity": 2,
+        "avaibility": "",
+        "category": "Autres"
+    },
+    {
+        "label": "Matelas épais",
+        "price": 200,
+        "quantity": 2,
+        "avaibility": "mai",
+        "category": "Chambre"
+    },
+    {
+        "label": "Micro-ondes",
+        "price": 20,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Batteur électrique",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Bouilloire",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Mixeur (soupes ou pâtisseries)",
+        "price": 20,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Appareil à raclette (pour 8)",
+        "price": 25,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "label": "Patins femme",
+        "price": 60,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Extérieur",
+        "description": "Taille 37-38"
+    },
+    {
+        "label": "Patins homme",
+        "price": 50,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Extérieur",
+        "description": "Taille 44 à confirmer"
+    }
+]
