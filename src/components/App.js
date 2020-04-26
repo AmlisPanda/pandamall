@@ -6,14 +6,12 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <div id='logo'>PandAmazon</div>
+        <div id='logo'>PandaMall</div>
         <div>
           Bienvenue <span>!</span>
         </div>
       </header>
-      <div id='content'>
-        <Products />
-      </div>
+      <Products />
     </div>
   );
 }

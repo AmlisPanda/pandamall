@@ -1,176 +1,6 @@
-[{
-        "label": "Table de cuisine",
-        "price": 150,
-        "quantity": 1,
-        "avaibility": "juin",
-        "images": [
-            "table-cuisine.jpg"
-        ],
-        "category": "Cuisine"
-    },
+[
     {
-        "label": "Chaises en bois",
-        "price": 10,
-        "quantity": 4,
-        "avaibility": "",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Meuble TV",
-        "price": 5,
-        "quantity": 1,
-        "avaibility": "juin",
-        "category": "Salon"
-    },
-    {
-        "label": "T 42\" SEIKI",
-        "price": 200,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Salon"
-    },
-    {
-        "label": "Table basse",
-        "price": 5,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Salon"
-    },
-    {
-        "label": "Meuble à roulettes",
-        "price": 80,
-        "quantity": 1,
-        "avaibility": "mai",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Canapés/fauteuil",
-        "price": 200,
-        "quantity": 3,
-        "avaibility": "mai",
-        "category": "Salon"
-    },
-    {
-        "label": "Meuble d'appoint",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Salon"
-    },
-    {
-        "label": "Tablettes IKEA",
-        "price": 10,
-        "quantity": 2,
-        "avaibility": "",
-        "category": "Salon"
-    },
-    {
-        "label": "Lampe IKEA",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Salon"
-    },
-    {
-        "label": "Meuble chaussures",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "mai",
-        "category": "Salon"
-    },
-    {
-        "label": "Table pliante de balcon",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Extérieur"
-    },
-    {
-        "label": "Chaises pliantes",
-        "price": 20,
-        "quantity": 3,
-        "avaibility": "",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Table de pique-nique pliante",
-        "price": 40,
-        "quantity": 1,
-        "avaibility": "juin",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Matelas gonflable",
-        "price": 25,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Chambre"
-    },
-    {
-        "label": "Set de meubles de chambre",
-        "price": 300,
-        "quantity": 1,
-        "avaibility": "mai",
-        "category": "Chambre",
-        "description": "2 commodes + 2 tables de chevet + miroir + base de lit"
-    },
-    {
-        "label": "Canapé-lit",
-        "price": 30,
-        "quantity": 1,
-        "avaibility": "juin",
-        "category": "Chambre"
-    },
-    {
-        "label": "Panier à linge blanc",
-        "price": 5,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Autres"
-    },
-    {
-        "label": "Paniers à linge solides",
-        "price": 25,
-        "quantity": 2,
-        "avaibility": "",
-        "category": "Autres"
-    },
-    {
-        "label": "Matelas épais",
-        "price": 200,
-        "quantity": 2,
-        "avaibility": "mai",
-        "category": "Chambre"
-    },
-    {
-        "label": "Micro-ondes",
-        "price": 20,
-        "quantity": 1,
-        "avaibility": "juin",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Batteur électrique",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Bouilloire",
-        "price": 10,
-        "quantity": 1,
-        "avaibility": "juin",
-        "category": "Cuisine"
-    },
-    {
-        "label": "Mixeur (soupes ou pâtisseries)",
-        "price": 20,
-        "quantity": 1,
-        "avaibility": "",
-        "category": "Cuisine"
-    },
-    {
+        "id": 0,
         "label": "Appareil à raclette (pour 8)",
         "price": 25,
         "quantity": 1,
@@ -178,19 +8,286 @@
         "category": "Cuisine"
     },
     {
+        "id": 1,
+        "label": "Batteur électrique",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "id": 2,
+        "label": "Bouilloire",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine"
+    },
+    {
+        "id": 3,
+        "label": "Canapé-lit",
+        "price": 50,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Chambre"
+    },
+    {
+        "id": 4,
+        "label": "Canapés/fauteuil",
+        "price": 200,
+        "quantity": 3,
+        "avaibility": "mai",
+        "category": "Salon",
+        "description": "Légers et facilement déplaçables, housses lavables. Abimés par le chat au niveau des accoudoirs."
+    },
+    {
+        "id": 5,
+        "label": "Chaises en bois",
+        "price": 20,
+        "quantity": 4,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "id": 6,
+        "label": "Chaises pliantes",
+        "price": 20,
+        "quantity": 3,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "id": 7,
+        "label": "Cuiseur à riz",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine",
+        "description": ""
+    },
+    {
+        "id": 8,
+        "label": "Lampe IKEA",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "id": 9,
+        "label": "Lot de 4 miroirs",
+        "price": 15,
+        "quantity": 4,
+        "avaibility": "",
+        "category": "Autres",
+        "description": ""
+    },
+    {
+        "id": 10,
+        "label": "Matelas gonflable",
+        "price": 35,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Chambre"
+    },
+    {
+        "id": 11,
+        "label": "Matelas épais",
+        "price": 200,
+        "quantity": 2,
+        "avaibility": "mai",
+        "category": "Chambre"
+    },
+    {
+        "id": 12,
+        "label": "Meuble chaussures",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Salon"
+    },
+    {
+        "id": 13,
+        "label": "Meuble d'appoint",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "id": 14,
+        "label": "Meuble TV",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Salon"
+    },
+    {
+        "id": 15,
+        "label": "Desserte à roulettes",
+        "price": 100,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Cuisine"
+    },
+    {
+        "id": 16,
+        "label": "Micro-ondes",
+        "price": 20,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine"
+    },
+    {
+        "id": 17,
+        "label": "Miroir vertical",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Autres",
+        "description": ""
+    },
+    {
+        "id": 18,
+        "label": "Mixeur (soupes ou pâtisseries)",
+        "price": 20,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Cuisine"
+    },
+    {
+        "id": 19,
+        "label": "Panier à linge blanc",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Autres"
+    },
+    {
+        "id": 20,
+        "label": "Paniers à linge solides",
+        "price": 25,
+        "quantity": 2,
+        "avaibility": "",
+        "category": "Autres"
+    },
+    {
+        "id": 21,
         "label": "Patins femme",
         "price": 60,
         "quantity": 1,
         "avaibility": "",
         "category": "Extérieur",
-        "description": "Taille 37-38"
+        "description": "Taille 37-38. Peu servi"
     },
     {
+        "id": 22,
         "label": "Patins homme",
         "price": 50,
         "quantity": 1,
         "avaibility": "",
         "category": "Extérieur",
-        "description": "Taille 44 à confirmer"
+        "description": "Taille 43-44. Peu servi"
+    },
+    {
+        "id": 23,
+        "label": "Set de meubles de chambre",
+        "price": 350,
+        "quantity": 1,
+        "avaibility": "mai",
+        "category": "Chambre",
+        "description": "2 commodes + 2 tables de chevet + miroir + base de lit + matelas"
+    },
+    {
+        "id": 24,
+        "label": "T 42\" SEIKI",
+        "price": 200,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "id": 25,
+        "label": "Table basse",
+        "price": 5,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "id": 26,
+        "label": "Table de cuisine",
+        "price": 150,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine",
+        "description": "4 personnes confortablement. Rallonge possible jusqu'à 6 personnes"
+    },
+    {
+        "id": 27,
+        "label": "Table de pique-nique pliante",
+        "price": 40,
+        "quantity": 1,
+        "avaibility": "juin",
+        "category": "Cuisine",
+        "description": "4-6 personnes"
+    },
+    {
+        "id": 28,
+        "label": "Table pliante de balcon",
+        "price": 10,
+        "quantity": 1,
+        "avaibility": "",
+        "category": "Extérieur"
+    },
+    {
+        "id": 29,
+        "label": "Tablettes IKEA",
+        "price": 10,
+        "quantity": 2,
+        "avaibility": "",
+        "category": "Salon"
+    },
+    {
+        "id": 30,
+        "label": "Tablettes en bois",
+        "price": 15,
+        "quantity": 2,
+        "category": "Autres"
+    },
+    {
+        "id": 31,
+        "label": "Tableau Italie",
+        "price": 10,
+        "quantity": 1,
+        "category": "Autres"
+    },
+    {
+        "id": 32,
+        "label": "Tableau Cuba",
+        "price": 10,
+        "quantity": 1,
+        "category": "Autres"
+    },
+    {
+        "id": 33,
+        "label": "Rideaux opaques",
+        "price": 15,
+        "quantity": 1,
+        "category": "Autres"
+    },
+    {
+        "id": 34,
+        "label": "Petit ventilateur",
+        "price": 20,
+        "quantity": 1,
+        "category": "Autres"
+    },
+    {
+        "id": 35,
+        "label": "Théière",
+        "price": 10,
+        "quantity": 1,
+        "category": "Autres"
     }
 ]

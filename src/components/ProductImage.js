@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ProductImage.css';
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ProductImage = ({ images }) => {
-  if (images && images.length > 0) {
+const ProductImage = ({ id }) => {
+
+  const [errorImage, setErrorImage] = useState(false);
+
+  const src = `/images/${id}.JPG`;
+
+  const onError = () => {
+    console.log('error');
+    setErrorImage(true);
+  };
+
+  if (!errorImage) {
     return (
-      <div className='product-image'>
-        <img src={`/images/${images[0]}`} alt='Produit' />
-      </div>
+      <img src={src} alt='Produit' onError={onError} />
+    );
+  }
+  else {
+    return (
+      <FontAwesomeIcon icon={faEyeSlash} color="#ddd" size="3x" />
     );
   }
 
-  return (
-    <div className='product-image no-image'>
-      <span>Pas de photo</span>
-    </div>
-  );
-};
 
-ProductImage.propTypes = {};
+}
+
+ProductImage.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default ProductImage;

@@ -8,9 +8,17 @@ body {
   overflow: hidden;
 }
 
+span {
+  cursor: default;
+}
+
 #root,
 .App {
   height: 100%;
+}
+
+select {
+  font-size: 1.2rem;
 }
 
 .App {
@@ -31,19 +39,19 @@ body {
 }
 
 .App-header {
-  background-color: #542C85;
+  border-bottom: 2px solid #542C85;
+  color: #542C85;
   min-height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 0 30px;
 }
 
@@ -51,11 +59,11 @@ body {
   color: #61dafb;
 }
 
-#content {
-  padding: 30px;
-  overflow-y: auto;
-  flex-grow: 1;
-  min-height: 0px;
+#products-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 
@@ -65,6 +73,7 @@ body {
   .products-list {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
