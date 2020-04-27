@@ -60,8 +60,8 @@
 }
 
 .action.active {
-    background-color: #e5e0f9;
-    color: #542C85;
+    background-color: #fff;
+    border-color: #542C85;
     font-weight: 500;
 }
 
@@ -81,6 +81,8 @@
 select {
     margin-left: 5px;
     border: none;
+    height: 25px;
+    outline: none;
 }
 
 .action.send-action {

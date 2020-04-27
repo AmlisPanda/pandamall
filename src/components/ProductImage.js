@@ -11,7 +11,6 @@ const ProductImage = ({ id }) => {
   const src = `/images/${id}.JPG`;
 
   const onError = () => {
-    console.log('error');
     setErrorImage(true);
   };
 

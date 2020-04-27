@@ -4,6 +4,8 @@ import products from '../config/products';
 import './Products.css';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ProductLightbox from './ProductLightbox';
+import classnames from 'classnames';
 
 const Products = () => {
   const categories = useMemo(() => {
@@ -18,6 +20,14 @@ const Products = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [mailTo, setMailTo] = useState('');
   const [searchText, setSearchText] = useState('');
+  const [fullScreenProduct, setFullScreenProduct] = useState();
+
+  const openProductHandler = (product) => {
+    setFullScreenProduct(product);
+  }
+  const closeLightboxHandler = () => {
+    setFullScreenProduct(undefined);
+  }
 
   const changeFilterHandler = (event) => {
     setFilter(event.target.value);
@@ -112,7 +122,7 @@ const Products = () => {
         </h2>
         <div id='toolbar'>
           <div id='filters'>
-            <div className='action'>
+            <div className={classnames('action', { 'active': !!filter })} >
               <label>Filtrer par</label>
               <select onChange={changeFilterHandler} value={filter}>
                 <option key={`category-all`} value=''>
@@ -137,14 +147,14 @@ const Products = () => {
                 <option value='name-desc'>Nom (desc)</option>
               </select>
             </div>
-            <div className='action' id="search-action">
+            <div className={classnames('action', { 'active': !!searchText })} id="search-action">
               <input type="text" id="search-input" placeholder="Recherche..." value={searchText} onChange={searchHandler} />
             </div>
 
 
           </div>
           {selectedProducts.length > 0 && <div className="action send-action">
-            <a href={mailTo}><FontAwesomeIcon icon={faEnvelope} /><span>Envoyer une demande</span></a>
+            <a href={mailTo} title="Envoyer un email avec la liste des articles sélectionnés"><FontAwesomeIcon icon={faEnvelope} /><span>Envoyer une demande</span></a>
           </div>}
         </div>
 
@@ -158,10 +168,15 @@ const Products = () => {
               key={'product-' + index}
               product={product}
               isSelected={productIsSelected(product)}
-              selectProductHandler={selectProductHandler} />
+              selectProductHandler={selectProductHandler}
+              openProductHandler={openProductHandler}
+            />
           ))}
         </div>
       </div>
+
+      {fullScreenProduct && <ProductLightbox product={fullScreenProduct} closeLightboxHandler={closeLightboxHandler} />
+      }
 
     </div>
   );

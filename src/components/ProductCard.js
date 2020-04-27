@@ -6,23 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons'
 
-const ProductCard = ({ product, selectProductHandler }) => {
+const ProductCard = ({ product, selectProductHandler, openProductHandler }) => {
 
   const [isSelected, setIsSelected] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const selectHandler = () => {
+  const selectHandler = (e) => {
+    e.stopPropagation();
     setIsSelected(!isSelected);
     selectProductHandler(product);
   }
 
   return (
     <div className='product-card'>
-      <div className='product-image'>
-        <button
+      <div className='product-image' onClick={() => openProductHandler(product)}>
+        {!product.soldOut && <button
+          title="Je suis intéressé"
           onClick={selectHandler}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}>
-          <FontAwesomeIcon size="2x" icon={isSelected || isHovered ? faHeart : faHeartRegular} color="#542C85" /></button>
+          <FontAwesomeIcon size="2x" icon={isSelected || isHovered ? faHeart : faHeartRegular} color="#542C85" /></button>}
+
         <ProductImage id={product.id} />
       </div>
 
@@ -41,14 +44,15 @@ const ProductCard = ({ product, selectProductHandler }) => {
           </div>
         )}
         <div className='card-footer'>
-          <span className='qty'>
+          {!product.soldOut ? <><div className='qty'>
+            {product['nb-images'] && <button className="show-pictures-btn" onClick={() => openProductHandler(product)}>Afficher les {product['nb-images']} photos</button>}
+          </div>
+            {product.avaibility && (
+              <span className='availability'>
+                Disponible en {product.avaibility}
+              </span>
+            )}</> : <span className="sold-out">Vendu</span>}
 
-          </span>
-          {product.avaibility && (
-            <span className='availability'>
-              Disponible en {product.avaibility}
-            </span>
-          )}
         </div>
       </div>
     </div>
