@@ -92,14 +92,6 @@
         "category": "Chambre"
     },
     {
-        "id": 11,
-        "label": "Matelas épais",
-        "price": 200,
-        "quantity": 1,
-        "avaibility": "mai",
-        "category": "Chambre"
-    },
-    {
         "id": 12,
         "label": "Meuble chaussures",
         "price": 10,
