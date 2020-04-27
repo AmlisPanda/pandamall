@@ -163,9 +163,9 @@ const Products = () => {
       </div>
       <div id="products-container">
         <div className='products-list'>
-          {filteredProducts.map((product, index) => (
+          {filteredProducts.map((product) => (
             <ProductCard
-              key={'product-' + index}
+              key={'product-' + product.id}
               product={product}
               isSelected={productIsSelected(product)}
               selectProductHandler={selectProductHandler}

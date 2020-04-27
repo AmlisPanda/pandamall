@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './ProductImage.css';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -10,20 +10,24 @@ const ProductImage = ({ id }) => {
 
   const src = `/images/${id}.JPG`;
 
-  const onError = () => {
+  const onError = (e) => {
+    console.log('error', id);
     setErrorImage(true);
   };
-
-  if (!errorImage) {
-    return (
-      <img src={src} alt='Produit' onError={onError} />
-    );
+  const onLoad = (e) => {
+    console.log('onload', id);
+    setErrorImage(false);
   }
-  else {
+
+  if (errorImage) {
     return (
       <FontAwesomeIcon icon={faEyeSlash} color="#ddd" size="3x" />
     );
   }
+
+  return (
+    <img src={src} alt='Produit' onLoad={onLoad} onError={onError} />
+  );
 
 
 }

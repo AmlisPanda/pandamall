@@ -29,7 +29,8 @@
         "price": 50,
         "quantity": 1,
         "avaibility": "juin",
-        "category": "Chambre"
+        "category": "Chambre",
+        "nb-images": 2
     },
     {
         "id": 4,
