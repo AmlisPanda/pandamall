@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ProductImage from './ProductImage';
-import './ProductCard.css';
+import '../styles/ProductCard.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons'
@@ -19,7 +19,7 @@ const ProductCard = ({ product, selectProductHandler, openProductHandler }) => {
   return (
     <div className='product-card'>
       <div className='product-image' onClick={() => openProductHandler(product)}>
-        {!product.soldOut && <button
+        {!product.buyer && <button
           title="Je suis intéressé"
           onClick={selectHandler}
           onMouseEnter={() => setIsHovered(true)}
@@ -44,7 +44,7 @@ const ProductCard = ({ product, selectProductHandler, openProductHandler }) => {
           </div>
         )}
         <div className='card-footer'>
-          {!product.soldOut ? <><div className='qty'>
+          {!product.buyer ? <><div className='qty'>
             {product['nb-images'] && <button className="show-pictures-btn" onClick={() => openProductHandler(product)}>Afficher les {product['nb-images']} photos</button>}
           </div>
             {product.avaibility && (

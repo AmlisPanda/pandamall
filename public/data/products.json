@@ -21,7 +21,8 @@
         "price": 10,
         "quantity": 1,
         "avaibility": "juin",
-        "category": "Cuisine"
+        "category": "Cuisine",
+        "buyer": "Christophe"
     },
     {
         "id": 3,
@@ -65,7 +66,8 @@
         "quantity": 1,
         "avaibility": "",
         "category": "Cuisine",
-        "description": ""
+        "description": "",
+        "buyer": "Pypy"
     },
     {
         "id": 8,
@@ -73,7 +75,8 @@
         "price": 10,
         "quantity": 1,
         "avaibility": "",
-        "category": "Salon"
+        "category": "Salon",
+        "buyer": "Pypy"
     },
     {
         "id": 9,
@@ -82,7 +85,8 @@
         "quantity": 4,
         "avaibility": "",
         "category": "Autres",
-        "description": ""
+        "description": "",
+        "buyer": "Pypy"
     },
     {
         "id": 10,
@@ -106,7 +110,8 @@
         "price": 10,
         "quantity": 1,
         "avaibility": "",
-        "category": "Salon"
+        "category": "Salon",
+        "buyer": "Pypy"
     },
     {
         "id": 14,
@@ -130,7 +135,8 @@
         "price": 20,
         "quantity": 1,
         "avaibility": "juin",
-        "category": "Cuisine"
+        "category": "Cuisine",
+        "buyer": "Christophe"
     },
     {
         "id": 17,
@@ -200,7 +206,7 @@
         "quantity": 1,
         "avaibility": "",
         "category": "Salon",
-        "soldOut": true
+        "buyer": "Nicolas"
     },
     {
         "id": 25,
@@ -208,7 +214,8 @@
         "price": 5,
         "quantity": 1,
         "avaibility": "",
-        "category": "Salon"
+        "category": "Salon",
+        "buyer": "Alex"
     },
     {
         "id": 26,
@@ -217,7 +224,8 @@
         "quantity": 1,
         "avaibility": "juin",
         "category": "Cuisine",
-        "description": "4 personnes confortablement. Rallonge possible jusqu'à 6 personnes"
+        "description": "4 personnes confortablement. Rallonge possible jusqu'à 6 personnes",
+        "buyer": "Pypy"
     },
     {
         "id": 27,
@@ -234,7 +242,8 @@
         "price": 10,
         "quantity": 1,
         "avaibility": "",
-        "category": "Extérieur"
+        "category": "Extérieur",
+        "buyer": "Alex"
     },
     {
         "id": 29,
@@ -242,7 +251,8 @@
         "price": 10,
         "quantity": 2,
         "avaibility": "",
-        "category": "Salon"
+        "category": "Salon",
+        "buyer": "Pypy"
     },
     {
         "id": 30,
@@ -257,14 +267,16 @@
         "label": "Tableau Italie",
         "price": 10,
         "quantity": 1,
-        "category": "Autres"
+        "category": "Autres",
+        "buyer": "Pypy"
     },
     {
         "id": 32,
         "label": "Tableau Cuba",
         "price": 10,
         "quantity": 1,
-        "category": "Autres"
+        "category": "Autres",
+        "buyer": "Pypy"
     },
     {
         "id": 33,

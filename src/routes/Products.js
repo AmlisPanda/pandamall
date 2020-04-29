@@ -1,16 +1,13 @@
 import React, { useMemo, useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
-import products from '../config/products';
-import './Products.css';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ProductLightbox from './ProductLightbox';
-import classnames from 'classnames';
+import ProductCard from '../components/ProductCard';
+import '../styles/Products.scss';
+import ProductLightbox from '../components/ProductLightbox';
+import { useSelector } from 'react-redux';
+import ListHeader from '../components/ListHeader';
 
 const Products = () => {
-  const categories = useMemo(() => {
-    return Array.from(new Set(products.map((p) => p.category)));
-  }, []);
+
+  const products = useSelector(state => state.products.items);
 
   const [filter, setFilter] = useState('');
   const [order, setOrder] = useState({
@@ -111,56 +108,24 @@ const Products = () => {
     }
 
     return result;
-  }, [filter, order, searchText]);
+  }, [filter, order.sortAttribute, order.sortOrder, products, searchText]);
+
+  const headerProps = {
+    filteredProducts,
+    selectedProducts,
+    enableSelection: true,
+    changeFilterHandler,
+    filter,
+    searchText,
+    searchHandler,
+    order,
+    changeOrderHandler,
+    mailTo
+  };
 
   return (
     <div id="products-content">
-      <div id='list-header'>
-
-        <h2 className="nb-articles">Articles ({filteredProducts.length})
-          {selectedProducts.length > 0 && <span>{selectedProducts.length} {selectedProducts.length === 1 ? 'sélectionné' : 'sélectionnés'}</span>}
-        </h2>
-        <div id='toolbar'>
-          <div id='filters'>
-            <div className={classnames('action', { 'active': !!filter })} >
-              <label>Filtrer par</label>
-              <select onChange={changeFilterHandler} value={filter}>
-                <option key={`category-all`} value=''>
-                  Tous
-              </option>
-                {categories.map((c, index) => (
-                  <option key={`category-${index}`} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className='action'>
-              <label>Trier par</label>
-              <select
-                onChange={changeOrderHandler}
-                value={`${order.sortAttribute}-${order.sortOrder}`}
-              >
-                <option value='price-asc'>Prix (asc)</option>
-                <option value='price-desc'>Prix (desc)</option>
-                <option value='name-asc'>Nom (asc)</option>
-                <option value='name-desc'>Nom (desc)</option>
-              </select>
-            </div>
-            <div className={classnames('action', { 'active': !!searchText })} id="search-action">
-              <input type="text" id="search-input" placeholder="Recherche..." value={searchText} onChange={searchHandler} />
-            </div>
-
-
-          </div>
-          {selectedProducts.length > 0 && <div className="action send-action">
-            <a href={mailTo} title="Envoyer un email avec la liste des articles sélectionnés"><FontAwesomeIcon icon={faEnvelope} /><span>Envoyer une demande</span></a>
-          </div>}
-        </div>
-
-
-
-      </div>
+      <ListHeader {...headerProps} />
       <div id="products-container">
         <div className='products-list'>
           {filteredProducts.map((product) => (

@@ -1,3 +1,5 @@
+@import './variables';
+
 html {
   font-size: 10px;
   height: 100%;
@@ -28,20 +30,9 @@ select {
   flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  border-bottom: 2px solid #542C85;
-  color: #542C85;
+  border-bottom: 2px solid $primary-color;
+  color: $primary-color;
   min-height: 25px;
   display: flex;
   flex-direction: column;
@@ -67,43 +58,25 @@ select {
   overflow: hidden;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
+@include phone {
   .products-list {
     grid-template-columns: 1fr;
   }
+} 
 
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
+@include tablet {
   .products-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-  .products-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-
+@include laptop {
   .products-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@include desktop {
   .products-list {
     grid-template-columns: repeat(4, 1fr);
   }

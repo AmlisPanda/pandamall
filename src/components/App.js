@@ -1,8 +1,17 @@
-import React from 'react';
-import './App.css';
-import Products from './Products';
+import React, { useEffect } from 'react';
+import '../styles/App.scss';
+import Products from '../routes/Products';
+import Soldout from '../routes/Soldout';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { connect, Provider } from "react-redux";
+import { fetchProducts } from "../actions/index";
 
-function App() {
+const App = ({ store, dispatch }) => {
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch]);
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -11,9 +20,35 @@ function App() {
           Bienvenue <span>!</span>
         </div>
       </header>
-      <Products />
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route path="/soldout">
+              <Soldout />
+            </Route>
+            <Route path="/">
+              <Products />
+            </Route>
+
+          </Switch>
+
+        </Router>
+      </Provider>
+
+
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  const { items, loading, error } = state;
+
+  return ({
+    items,
+    loading,
+    error
+  });
+};
+
+
+export default connect(mapStateToProps)(App);

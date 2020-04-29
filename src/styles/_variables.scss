@@ -1,0 +1,32 @@
+$primary-color: #542c85;
+$primary-light-color: #f0e5ff;
+$gray-color: #ddd;
+
+$phone-width: 576px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$desktop-width: 1200px;
+
+@mixin phone {
+  @media  (max-width: $phone-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
