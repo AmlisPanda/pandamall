@@ -1,11 +1,12 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import ProductCard from '../components/ProductCard';
 import '../styles/Products.scss';
 import ProductLightbox from '../components/ProductLightbox';
-import { useSelector } from 'react-redux';
+import { useSelector, connect } from 'react-redux';
 import ListHeader from '../components/ListHeader';
+import { selectProduct, unselectProduct } from '../actions';
 
-const Products = () => {
+const Products = ({ selectedItems, selectItem, unselectItem }) => {
 
   const products = useSelector(state => state.products.items);
 
@@ -14,7 +15,6 @@ const Products = () => {
     sortAttribute: 'name',
     sortOrder: 'asc',
   });
-  const [selectedProducts, setSelectedProducts] = useState([]);
   const [mailTo, setMailTo] = useState('');
   const [searchText, setSearchText] = useState('');
   const [fullScreenProduct, setFullScreenProduct] = useState();
@@ -35,32 +35,28 @@ const Products = () => {
     setOrder({ sortAttribute: value[0], sortOrder: value[1] });
   };
 
-  const productIsSelected = (product) => {
-    return selectedProducts.some(p => p.id === product.id);
-  }
+  const productIsSelected = useCallback((product) => {
+    return selectedItems.some(p => p.id === product.id);
+  }, [selectedItems])
 
-  const selectProductHandler = (product) => {
-    let newSelectedProducts = [];
-    if (productIsSelected(product)) {
-      newSelectedProducts = selectedProducts.filter(p => p.id !== product.id);
-    } else {
-      newSelectedProducts = selectedProducts.concat(product);
-    }
-
-    setSelectedProducts(newSelectedProducts);
-  }
+  const selectProductHandler = useCallback((product) => {
+    if (!productIsSelected(product))
+      return selectItem(product);
+    else
+      return unselectItem(product.id);
+  }, [selectItem, unselectItem, productIsSelected]);
 
   const searchHandler = (event) => {
     setSearchText(event.target.value);
   };
 
   useEffect(() => {
-    if (selectedProducts.length > 0) {
-      const products = selectedProducts.map(p => `#${p.id} - ${p.label}`).join('\n');
+    if (selectedItems.length > 0) {
+      const products = selectedItems.map(p => `#${p.id} - ${p.label}`).join('\n');
       const body = encodeURIComponent(`Salut, \nJe suis intéressé par :\n\n${products}\n\n<Mon nom>`);
       setMailTo(`mailto:selyne57@gmail.com?subject=[PandaMall] Objets à vendre&body=${body}`);
     }
-  }, [selectedProducts]);
+  }, [selectedItems]);
 
 
   const filteredProducts = useMemo(() => {
@@ -112,7 +108,7 @@ const Products = () => {
 
   const headerProps = {
     filteredProducts,
-    selectedProducts,
+    selectedProducts: selectedItems,
     enableSelection: true,
     changeFilterHandler,
     filter,
@@ -132,7 +128,6 @@ const Products = () => {
             <ProductCard
               key={'product-' + product.id}
               product={product}
-              isSelected={productIsSelected(product)}
               selectProductHandler={selectProductHandler}
               openProductHandler={openProductHandler}
             />
@@ -147,4 +142,23 @@ const Products = () => {
   );
 };
 
-export default Products;
+const mapStateToProps = state => {
+  const { selectedItems } = state.products;
+
+  return ({
+    selectedItems
+  });
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    selectItem: product => {
+      dispatch(selectProduct(product))
+    },
+    unselectItem: id => {
+      dispatch(unselectProduct(id))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

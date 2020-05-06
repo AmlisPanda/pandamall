@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import classnames from 'classnames';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/ListHeader.scss';
 
 const ListHeader = ({
   filteredProducts,
